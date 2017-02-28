@@ -10,8 +10,8 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class ArticleCollectionViewController: UICollectionViewController {
-
+class ArticleCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
     var articles = [Article]()
     
     
@@ -56,39 +56,27 @@ class ArticleCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as! ArticleCollectionViewCell
         // Configure the cell
         cell.titleLabel.text = article.title
+        
+        //TODO: Download picture
     
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    
+    
+    // MARK: Flow Layout
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let width = collectionView.bounds.width
+        let columns = 2
+        let gaps = 1
+        
+        let tmpWidth = width - CGFloat(gaps)
+        let itemWidth = tmpWidth / CGFloat(columns)
+        let itemHeight = itemWidth
+        
+        return CGSize(width: itemWidth, height: itemHeight)
     }
-    */
-
 }
