@@ -12,7 +12,11 @@ private let reuseIdentifier = "Cell"
 
 class ArticleCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var articles = [Article]()
+    var articles = [Article]() {
+        didSet {
+            collectionView?.reloadData()
+        }
+    }
     
     // MARK: viewDidLoad
     override func viewDidLoad() {

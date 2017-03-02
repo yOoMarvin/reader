@@ -18,13 +18,14 @@ class RSSResource: NSObject {
     var parsedElement = ""
     var xmlParser: XMLParser?
     
-    var completionHandler: ((_ articles:[Article]) -> ())?
+    var completionHandler: ((_ articles: [Article]) -> ())?
     
-    func processFeed(completion: @escaping (_ articles:[Article]) -> ()) {
+    func processFeed(completion: @escaping (_ articles: [Article]) -> ()) {
         self.completionHandler = completion
         
         //download the feed
-        guard let feedUrl = URL(string: "http://codingtutor.de/feed") else {
+        guard let feedUrl = URL(string: "https://codingtutor.de/feed/") else {
+            print("error creating url")
             return
         }
         
@@ -105,6 +106,9 @@ extension RSSResource: XMLParserDelegate {
         //image url must be set here, because it is an attribute. Will never be called in foundCharacters function
         currentArticle.imageUrl = currentImageUrl
         articleList.append(currentArticle)
+        
+        //DEBUG: 
+        print("Artikel: \(currentArticle.title)")
     }
     
     //called on end of document
