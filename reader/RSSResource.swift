@@ -16,13 +16,36 @@ class RSSResource: NSObject {
     var currentArticle = Article()
     var currentImageUrl = ""
     var parsedElement = ""
+    var xmlParser: XMLParser?
     
     var completionHandler: ((_ articles:[Article]) -> ())?
     
     func processFeed(completion: @escaping (_ articles:[Article]) -> ()) {
         self.completionHandler = completion
         
+        //download the feed
+        guard let feedUrl = URL(string: "http://codingtutor.de/feed") else {
+            return
+        }
         
+        let urlRequest = URLRequest(url: feedUrl)
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: urlRequest) {
+            (data, response, error) in
+            
+            guard let data = data else {
+                print(error?.localizedDescription as Any)
+                return
+            }
+            
+            //init the xml parser with the downloaded data
+            self.xmlParser = XMLParser(data: data)
+            self.xmlParser?.delegate = self
+            self.xmlParser?.parse()
+        }
+        
+        task.resume()
     }
 }
 

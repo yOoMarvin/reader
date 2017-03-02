@@ -14,14 +14,14 @@ class ArticleCollectionViewController: UICollectionViewController, UICollectionV
     
     var articles = [Article]()
     
-    
+    // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Do any additional setup after loading the view.
+        let rssResource = RSSResource()
+        rssResource.processFeed { (articles) in
+            self.articles = articles
+        }
     }
 
     override func didReceiveMemoryWarning() {
