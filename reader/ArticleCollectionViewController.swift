@@ -79,4 +79,10 @@ class ArticleCollectionViewController: UICollectionViewController, UICollectionV
         
         return CGSize(width: itemWidth, height: itemHeight)
     }
+    
+    
+    
+    // MARK: UICollectionViewDelegate
+    
+    
 }
