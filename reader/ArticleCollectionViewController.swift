@@ -12,6 +12,7 @@ private let reuseIdentifier = "Cell"
 
 class ArticleCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    let rssResource = RSSResource()
     var articles = [Article]() {
         didSet {
             collectionView?.reloadData()
@@ -22,7 +23,6 @@ class ArticleCollectionViewController: UICollectionViewController, UICollectionV
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let rssResource = RSSResource()
         rssResource.processFeed { (articles) in
             self.articles = articles
         }
@@ -56,7 +56,12 @@ class ArticleCollectionViewController: UICollectionViewController, UICollectionV
         // Configure the cell
         cell.titleLabel.text = article.title
         
-        //TODO: Download picture
+        //image call
+        rssResource.fetchImage(url: article.imageUrl) {
+            (image:UIImage) in
+            
+            cell.imageView.image = image
+        }
     
         return cell
     }

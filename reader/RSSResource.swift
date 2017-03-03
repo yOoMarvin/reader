@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class RSSResource: NSObject {
     
@@ -47,6 +48,29 @@ class RSSResource: NSObject {
         }
         
         task.resume()
+    }
+    
+    
+    // MARK: Process picture
+    
+    func fetchImage(url: String, completion: @escaping (_ image: UIImage) -> ()) {
+        
+        guard let urlObj = URL(string: url) else {
+            print("Error in image url")
+            return
+        }
+        
+        DispatchQueue.global().async {
+            guard let imgData = try? Data(contentsOf: urlObj) else {
+                return
+            }
+            
+            if let currentImg = UIImage(data: imgData) {
+                DispatchQueue.main.async {
+                    completion(currentImg)
+                }
+            }
+        }
     }
 }
 
