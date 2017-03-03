@@ -79,6 +79,16 @@ class ArticleCollectionViewController: UICollectionViewController, UICollectionV
         return CGSize(width: itemWidth, height: itemHeight)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return CGFloat(1)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return CGFloat(1)
+    }
+    
     
     
     // MARK: UICollectionViewDelegate
