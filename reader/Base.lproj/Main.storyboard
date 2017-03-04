@@ -25,10 +25,10 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="articleCell" id="THo-pj-MkS" customClass="ArticleCollectionViewCell" customModule="reader" customModuleProvider="target">
-                                <rect key="frame" x="88" y="0.0" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="201" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B0M-eD-qXP">
@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" id="Ah4-qE-eqz"/>
+                    <tabBarItem key="tabBarItem" title="About" image="glyphicons_024_parents" id="Ah4-qE-eqz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBe-rl-hoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,7 +105,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="liu-7K-Yua" id="Gj9-Wv-49a">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -125,7 +125,7 @@
         <scene sceneID="pft-DI-DHB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M4z-ir-sVJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Article" id="HL2-QG-2Oc"/>
+                    <tabBarItem key="tabBarItem" title="Article" image="glyphicons_020_home" id="HL2-QG-2Oc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pSg-1d-JBp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -164,7 +164,7 @@
         <scene sceneID="RZ3-YZ-szZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ixz-GM-ig8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Offers" id="HAG-gX-0fD"/>
+                    <tabBarItem key="tabBarItem" title="Offers" image="glyphicons_009_magic" id="HAG-gX-0fD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WGG-QW-2L4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -180,4 +180,9 @@
             <point key="canvasLocation" x="-377" y="1645"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="glyphicons_009_magic" width="24" height="24"/>
+        <image name="glyphicons_020_home" width="27" height="26"/>
+        <image name="glyphicons_024_parents" width="33" height="22"/>
+    </resources>
 </document>
