@@ -59,7 +59,6 @@
                                 <connections>
                                     <outlet property="imageView" destination="B0M-eD-qXP" id="fpi-ft-r0e"/>
                                     <outlet property="titleLabel" destination="quJ-Pe-VKP" id="aNU-Cv-Rxb"/>
-                                    <segue destination="WCI-QG-ifB" kind="show" identifier="showDetail" id="uSB-M4-826"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -69,6 +68,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="pJY-lS-IQP"/>
+                    <connections>
+                        <segue destination="WCI-QG-ifB" kind="show" identifier="showDetail" id="4c4-Z2-lFu"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZf-0w-d1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,12 +87,27 @@
                     <view key="view" contentMode="scaleToFill" id="EHY-EP-Haf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Wz-j3-6pd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Wz-j3-6pd" firstAttribute="top" secondItem="Xpf-Q5-JAw" secondAttribute="bottom" id="Igg-Qy-HYa"/>
+                            <constraint firstAttribute="bottom" secondItem="1Wz-j3-6pd" secondAttribute="bottom" id="Px2-eb-3Qj"/>
+                            <constraint firstAttribute="trailing" secondItem="1Wz-j3-6pd" secondAttribute="trailing" id="WUQ-fE-4Ek"/>
+                            <constraint firstItem="1Wz-j3-6pd" firstAttribute="leading" secondItem="EHY-EP-Haf" secondAttribute="leading" id="gLY-CJ-KT4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="1Wz-j3-6pd" id="xv7-96-9Xr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYE-Af-n5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2415" y="117"/>
+            <point key="canvasLocation" x="2413.5999999999999" y="116.49175412293854"/>
         </scene>
         <!--About-->
         <scene sceneID="NSc-L4-fDQ">

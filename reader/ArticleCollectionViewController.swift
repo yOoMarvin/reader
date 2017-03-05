@@ -27,18 +27,25 @@ class ArticleCollectionViewController: UICollectionViewController, UICollectionV
             self.articles = articles
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    
+    // MARK: Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        let indexPath = sender as! IndexPath
+        if segue.identifier == "showDetail" {
+            let dstCtrl = segue.destination as! DetailViewController
+            dstCtrl.currentArticle = articles[indexPath.row]
+        }
     }
-    */
-
+ 
+    
+    
     // MARK: UICollectionViewDataSource
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showDetail", sender: indexPath)
+    }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -96,7 +103,6 @@ class ArticleCollectionViewController: UICollectionViewController, UICollectionV
     
     
     
-    // MARK: UICollectionViewDelegate
     
     
 }
