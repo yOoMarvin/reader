@@ -28,7 +28,7 @@
                                 <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="201" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B0M-eD-qXP">
@@ -59,6 +59,7 @@
                                 <connections>
                                     <outlet property="imageView" destination="B0M-eD-qXP" id="fpi-ft-r0e"/>
                                     <outlet property="titleLabel" destination="quJ-Pe-VKP" id="aNU-Cv-Rxb"/>
+                                    <segue destination="WCI-QG-ifB" kind="show" identifier="showDetail" id="uSB-M4-826"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -72,6 +73,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZf-0w-d1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1501.5999999999999" y="117.39130434782609"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="DQo-iz-Q4D">
+            <objects>
+                <viewController id="WCI-QG-ifB" customClass="DetailViewController" customModule="reader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xpf-Q5-JAw"/>
+                        <viewControllerLayoutGuide type="bottom" id="DwG-cq-axz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EHY-EP-Haf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYE-Af-n5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2415" y="117"/>
         </scene>
         <!--About-->
         <scene sceneID="NSc-L4-fDQ">
