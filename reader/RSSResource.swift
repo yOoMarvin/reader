@@ -116,7 +116,9 @@ extension RSSResource: XMLParserDelegate {
             currentArticle.title += str
         }
         if parsedElement == "link" {
-            currentArticle.url += str
+            if currentArticle.url.isEmpty {
+                currentArticle.url = str
+            }
         }
     }
     
