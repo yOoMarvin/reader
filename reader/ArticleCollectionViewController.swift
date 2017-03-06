@@ -29,6 +29,16 @@ class ArticleCollectionViewController: UICollectionViewController, UICollectionV
     }
     
     
+    // MARK: View Transition
+    //called when size is changed (orientation)
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        let flowLayout = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
+        flowLayout.invalidateLayout()
+    }
+    
+    
     // MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -81,8 +91,15 @@ class ArticleCollectionViewController: UICollectionViewController, UICollectionV
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = collectionView.bounds.width
-        let columns = 2
-        let gaps = 1
+        var columns = 2
+        var gaps = 1
+        
+        //get rotation of device and react to it
+        if UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation){
+            columns = 3
+            gaps = 2
+        }
+        
         
         let tmpWidth = width - CGFloat(gaps)
         let itemWidth = tmpWidth / CGFloat(columns)
