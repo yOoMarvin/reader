@@ -29,7 +29,7 @@
                                 <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="201" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B0M-eD-qXP">
@@ -113,7 +113,7 @@
         <!--About-->
         <scene sceneID="NSc-L4-fDQ">
             <objects>
-                <viewController id="zio-4f-wqK" sceneMemberID="viewController">
+                <viewController id="zio-4f-wqK" customClass="AboutViewController" customModule="reader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ewb-ax-iL2"/>
                         <viewControllerLayoutGuide type="bottom" id="xgP-U6-moz"/>
@@ -138,14 +138,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjv-jl-l55">
+                                <rect key="frame" x="98" y="389" width="178" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="github.com/yoomarvin"/>
+                                <connections>
+                                    <action selector="didTapLink:" destination="zio-4f-wqK" eventType="touchUpInside" id="hsM-uD-kFj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Bjv-jl-l55" firstAttribute="top" secondItem="5Cw-U8-Cbf" secondAttribute="bottom" constant="47.5" id="4cE-Lp-ogT"/>
                             <constraint firstItem="fEK-EC-gv5" firstAttribute="top" secondItem="ewb-ax-iL2" secondAttribute="bottom" constant="8" id="B0g-F0-jJi"/>
                             <constraint firstItem="5Cw-U8-Cbf" firstAttribute="leading" secondItem="fSj-ee-2LE" secondAttribute="leadingMargin" id="V0G-QC-Fkb"/>
                             <constraint firstItem="5Cw-U8-Cbf" firstAttribute="top" secondItem="fEK-EC-gv5" secondAttribute="bottom" constant="97" id="n5S-rG-G0I"/>
                             <constraint firstItem="5Cw-U8-Cbf" firstAttribute="trailing" secondItem="fSj-ee-2LE" secondAttribute="trailingMargin" id="sqn-BK-ZRO"/>
                             <constraint firstItem="fEK-EC-gv5" firstAttribute="centerX" secondItem="fSj-ee-2LE" secondAttribute="centerX" id="uYG-h3-xae"/>
+                            <constraint firstItem="Bjv-jl-l55" firstAttribute="centerX" secondItem="fSj-ee-2LE" secondAttribute="centerX" id="xHc-q7-Abc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="glyphicons_024_parents" id="Ah4-qE-eqz"/>

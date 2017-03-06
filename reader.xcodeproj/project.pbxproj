@@ -16,6 +16,7 @@
 		58CE530A1E65C91600043225 /* ArticleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CE53091E65C91600043225 /* ArticleCollectionViewController.swift */; };
 		58CE530C1E65C93800043225 /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CE530B1E65C93800043225 /* ArticleCollectionViewCell.swift */; };
 		58CE530E1E65C9DE00043225 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CE530D1E65C9DE00043225 /* Article.swift */; };
+		58D86FF71E6DE54100958997 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D86FF61E6DE54100958997 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		58CE53091E65C91600043225 /* ArticleCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewController.swift; sourceTree = "<group>"; };
 		58CE530B1E65C93800043225 /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		58CE530D1E65C9DE00043225 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		58D86FF61E6DE54100958997 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				58CE53091E65C91600043225 /* ArticleCollectionViewController.swift */,
 				585C5C5C1E6C2594007752C1 /* DetailViewController.swift */,
+				58D86FF61E6DE54100958997 /* AboutViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				58CE530E1E65C9DE00043225 /* Article.swift in Sources */,
 				58CE530C1E65C93800043225 /* ArticleCollectionViewCell.swift in Sources */,
 				589E31A81E688AEB00FD1902 /* RSSResource.swift in Sources */,
+				58D86FF71E6DE54100958997 /* AboutViewController.swift in Sources */,
 				585C5C5D1E6C2594007752C1 /* DetailViewController.swift in Sources */,
 				5873C1E81E646FD900982982 /* AppDelegate.swift in Sources */,
 				58CE530A1E65C91600043225 /* ArticleCollectionViewController.swift in Sources */,
