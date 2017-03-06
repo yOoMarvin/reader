@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -120,13 +121,38 @@
                     <view key="view" contentMode="scaleToFill" id="fSj-ee-2LE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEK-EC-gv5">
+                                <rect key="frame" x="149" y="28" width="77.5" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cw-U8-Cbf">
+                                <rect key="frame" x="16" y="161.5" width="343" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="BJ9-uP-GQm"/>
+                                </constraints>
+                                <string key="text">This is just a simple reader app. The goal was to learn some stuff about RSS feeds and to work with xml. Also did a tab bar layout and worked with the UICollectionView</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fEK-EC-gv5" firstAttribute="top" secondItem="ewb-ax-iL2" secondAttribute="bottom" constant="8" id="B0g-F0-jJi"/>
+                            <constraint firstItem="5Cw-U8-Cbf" firstAttribute="leading" secondItem="fSj-ee-2LE" secondAttribute="leadingMargin" id="V0G-QC-Fkb"/>
+                            <constraint firstItem="5Cw-U8-Cbf" firstAttribute="top" secondItem="fEK-EC-gv5" secondAttribute="bottom" constant="97" id="n5S-rG-G0I"/>
+                            <constraint firstItem="5Cw-U8-Cbf" firstAttribute="trailing" secondItem="fSj-ee-2LE" secondAttribute="trailingMargin" id="sqn-BK-ZRO"/>
+                            <constraint firstItem="fEK-EC-gv5" firstAttribute="centerX" secondItem="fSj-ee-2LE" secondAttribute="centerX" id="uYG-h3-xae"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="glyphicons_024_parents" id="Ah4-qE-eqz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBe-rl-hoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502" y="886"/>
+            <point key="canvasLocation" x="1501.5999999999999" y="884.70764617691157"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Xbo-HK-aGB">
